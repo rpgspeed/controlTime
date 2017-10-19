@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.roberto.controltime.MainActivity"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:id="@+id/textLastRegistry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="49dp"
+        android:text="Último fichaje"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/valueLastRegistry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="---"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:layout_below="@+id/textLastRegistry"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:id="@+id/textDifferenceDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/valueLastRegistry"
+        android:layout_marginTop="20dp"
+        android:text="Diferencia día"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/valueDifferenceDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="---"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:layout_below="@+id/textDifferenceDay"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+
+    <TextView
+        android:id="@+id/textDifferenceMonth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/valueDifferenceDay"
+        android:layout_marginTop="20dp"
+        android:text="Diferencia mes"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/valueMonthTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="---"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:layout_below="@+id/textDifferenceMonth"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+
+    <Button
+        android:id="@+id/entrada"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Entrada"
+        android:onClick="registryEntry"
+        android:layout_above="@+id/salida"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:id="@+id/salida"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Salida"
+        android:onClick="registryExit"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="54dp" />
+
+</RelativeLayout>
